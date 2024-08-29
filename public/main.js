@@ -4,35 +4,52 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { STLLoader } from 'three/addons/loaders/STLLoader.js';
 
 
-const scene = new THREE.Scene();
+const container = document.getElementById('3d-container');
 
+
+const scene = new THREE.Scene();
 
 
 scene.background = new THREE.Color(0xF2F2F2);
 
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
 
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
 
 
-const ambientLight = new THREE.AmbientLight(0x9B9B9B); // Мягкий белый свет
+const ambientLight = new THREE.AmbientLight(0x9B9B9B);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0x9B9B9A, 90);
+const directionalLight = new THREE.DirectionalLight(0x9B9B9A, 70);
 directionalLight.position.set(20, 20, 20).normalize();
 scene.add(directionalLight);
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
+controls.enableDamping = true; // Включаем инерцию
 controls.dampingFactor = 0.05;
 controls.screenSpacePanning = false;
 controls.minDistance = 0.1;
 controls.maxDistance = 500;
+
+function updateRendererSize() {
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+}
+
+
+updateRendererSize();
+
+
+window.addEventListener('resize', updateRendererSize);
 
 
 const loader = new STLLoader();
@@ -58,7 +75,7 @@ loader.load('CLMA-6-2N.FLD.RU.stl', function (geometry) {
     function animate() {
         requestAnimationFrame(animate);
 
-
+        // Вращаем объект (опционально)
         // mesh.rotation.x += 0.01;
         // mesh.rotation.y += 0.01;
 
@@ -67,14 +84,4 @@ loader.load('CLMA-6-2N.FLD.RU.stl', function (geometry) {
         renderer.render(scene, camera);
     }
     animate();
-});
-
-
-window.addEventListener('resize', function () {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
 });

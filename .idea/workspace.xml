@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fdeb231-af67-4914-8df3-61cb72bed63a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/asset_mapper.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/importmap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +179,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/OSPanel/domains/models/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -237,7 +231,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724834017254</updated>
-      <workItem from="1724834019740" duration="15459000" />
+      <workItem from="1724834019740" duration="18367000" />
     </task>
     <servers />
   </component>
